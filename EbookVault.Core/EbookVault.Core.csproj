@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EbookVault.Infrastructure\EbookVault.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
