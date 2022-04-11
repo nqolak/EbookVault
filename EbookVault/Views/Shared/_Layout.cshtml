@@ -69,5 +69,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE App -->
 <script src="~/js/adminlte.min.js"></script>
 <script src="~/plugins/toastr/toastr.min.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
