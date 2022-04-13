@@ -3,11 +3,12 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1>Welcome</h1>
     <br>
-    <p>EbookVault is an online library of free eBooks.
-        <br>In order to access our database please <a asp-area="Identity" asp-page="/Account/Register">Create an Account</a> or <a asp-area="Identity" asp-page="/Account/Login">Log In</a></>. 
-        <br>For more information check the About page.</p>
-        <br>
+    <p>
+        In order to access our database please <a asp-area="Identity" asp-page="/Account/Register">Create an Account</a> or <a asp-area="Identity" asp-page="/Account/Login">Log In</a></>. <br>
+        For more information check the <a asp-area="" asp-controller="Home" asp-action="About">About</a> page.
+    </p>
+    <br>
     <img src="~/img/book.png" width="250" height="250">
 </div>
