@@ -1,4 +1,4 @@
-using EbookVault.Data;
+using EbookVault.Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

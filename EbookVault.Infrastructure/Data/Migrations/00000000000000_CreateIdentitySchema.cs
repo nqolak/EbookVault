@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace EbookVault.Data.Migrations
+namespace EbookVault.Infrastructure.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {
