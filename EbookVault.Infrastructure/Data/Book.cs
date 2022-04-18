@@ -9,6 +9,7 @@ namespace EbookVault.Infrastructure.Data
 {
     public class Book
     {
+        [Key]
         [StringLength(36)]
         public Guid Id { get; set; } = Guid.NewGuid();
 

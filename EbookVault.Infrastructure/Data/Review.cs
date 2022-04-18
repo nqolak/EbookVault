@@ -7,16 +7,25 @@ using System.Threading.Tasks;
 
 namespace EbookVault.Infrastructure.Data
 {
-    public class Genre
+    public class Review
     {
         [Key]
         [StringLength(36)]
         public Guid Id { get; set; } = Guid.NewGuid();
 
-        [Required]
-        [StringLength(20)]
-        public string Name { get; set; }
+        public Decimal Rating { get; set; }
 
-        public bool IsDeleted { get; set; } = false;
+        [StringLength(300)]
+        public string? CommentText { get; set; } 
+
+        // TODO
+
+        [Required]
+        [StringLength(36)]
+        public Guid PosterId { get; set; }
+
+        [Required]
+        [StringLength(36)]
+        public Guid BookId { get; set; }
     }
 }
