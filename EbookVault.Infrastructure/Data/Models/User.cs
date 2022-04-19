@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EbookVault.Infrastructure.Data
+namespace EbookVault.Infrastructure.Data.Models
 {
     public class User : IdentityUser
     {

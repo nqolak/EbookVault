@@ -7,16 +7,24 @@ using System.Threading.Tasks;
 
 namespace EbookVault.Infrastructure.Data.Models
 {
-    public class Genre
+    public class Message
     {
         [Key]
         [StringLength(36)]
         public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
-        [StringLength(20)]
-        public string Name { get; set; }
+        [StringLength(500)]
+        public string Content { get; set; }
 
-        public bool IsDeleted { get; set; } = false;
+        public DateTime Date = DateTime.Now;
+
+        // TODO
+
+        [StringLength(36)]
+        public Guid SenderId { get; set; }
+
+        [StringLength(36)]
+        public Guid RecipientId { get; set; }
     }
 }
