@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +36,7 @@ namespace EbookVault.Infrastructure.Data.Models
         [Required]
         public DateTime UploadDate = DateTime.Now;
 
-        [Required]
+        [Precision(3,2)]
         public Decimal Rating = 0m;
 
         [StringLength(500)]
@@ -44,10 +46,10 @@ namespace EbookVault.Infrastructure.Data.Models
 
         // Relations
 
-        public User Uploader { get; set; }
+        public User Uploder { get; set; }
 
-        public virtual ICollection<User> UserBooks { get; set; } = new HashSet<User>();
+        public virtual ICollection<User> Users { get; set; } = new HashSet<User>();
 
-        public virtual ICollection<Genre> BookGenres { get; set; } = new HashSet<Genre>();
+        public virtual ICollection<Genre> Genres { get; set; } = new HashSet<Genre>();
     }
 }

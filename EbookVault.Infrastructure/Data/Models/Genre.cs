@@ -21,6 +21,6 @@ namespace EbookVault.Infrastructure.Data.Models
 
         // Relations
 
-        public virtual ICollection<Book> BookGenres { get; set; } = new HashSet<Book>();
+        public virtual ICollection<Book> Books { get; set; } = new HashSet<Book>();
     }
 }

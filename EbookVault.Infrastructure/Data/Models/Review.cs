@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace EbookVault.Infrastructure.Data.Models
         [StringLength(36)]
         public Guid Id { get; set; } = Guid.NewGuid();
 
+        [Precision(3, 2)]
         public Decimal Rating { get; set; }
 
         [StringLength(500)]
