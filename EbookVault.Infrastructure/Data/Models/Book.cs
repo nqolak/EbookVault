@@ -40,6 +40,8 @@ namespace EbookVault.Infrastructure.Data.Models
         [StringLength(500)]
         public string? Summary { get; set; }
 
+        public bool IsVisible { get; set; }
+
         // Relations
 
         public User Uploader { get; set; }

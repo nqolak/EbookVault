@@ -7,21 +7,20 @@ using System.Threading.Tasks;
 
 namespace EbookVault.Infrastructure.Data.Models
 {
-    public class Review
+    public class Feedback
     {
         [Key]
         [StringLength(36)]
         public Guid Id { get; set; } = Guid.NewGuid();
 
-        public Decimal Rating { get; set; }
-
+        [Required]
         [StringLength(500)]
-        public string? CommentText { get; set; } 
+        public string FeedbackText { get; set; }
+
+        public DateTime Date { get; set; } = DateTime.Now;
 
         // Relations
 
-        public User Reviewer { get; set; }
-
-        public Book BookReviewed { get; set; }
+        public User Poster { get; set; }
     }
 }
