@@ -18,14 +18,10 @@ namespace EbookVault.Infrastructure.Data.Models
         [StringLength(300)]
         public string? CommentText { get; set; } 
 
-        // TODO
+        // Relations
 
-        [Required]
-        [StringLength(36)]
-        public Guid PosterId { get; set; }
+        public User Reviewer { get; set; }
 
-        [Required]
-        [StringLength(36)]
-        public Guid BookId { get; set; }
+        public Book BookReviewed { get; set; }
     }
 }

@@ -18,5 +18,9 @@ namespace EbookVault.Infrastructure.Data.Models
         public string Name { get; set; }
 
         public bool IsDeleted { get; set; } = false;
+
+        // Relations
+
+        public virtual ICollection<Book> BookGenres { get; set; } = new HashSet<Book>();
     }
 }

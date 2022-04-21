@@ -19,12 +19,10 @@ namespace EbookVault.Infrastructure.Data.Models
 
         public DateTime Date = DateTime.Now;
 
-        // TODO
+        // Relations
 
-        [StringLength(36)]
-        public Guid SenderId { get; set; }
+        public User Sender { get; set; }
 
-        [StringLength(36)]
-        public Guid RecipientId { get; set; }
+        public User Recipient { get; set; }
     }
 }

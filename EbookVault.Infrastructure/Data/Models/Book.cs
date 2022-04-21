@@ -40,13 +40,12 @@ namespace EbookVault.Infrastructure.Data.Models
         [StringLength(500)]
         public string? Summary { get; set; }
 
-        // TODO
+        // Relations
 
-        [Required]
-        [StringLength(36)]
-        public Guid UploaderId { get; set; }
+        public User Uploader { get; set; }
 
-        [Required]
-        public HashSet<Genre> Genres { get; set; }
+        public virtual ICollection<User> UserBooks { get; set; } = new HashSet<User>();
+
+        public virtual ICollection<Genre> BookGenres { get; set; } = new HashSet<Genre>();
     }
 }
